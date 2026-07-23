@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet"  href="{{ url_for('static',filename='css/style.css') }}" />
+    </head>
+    <body>
+        <table border="1">
+
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>City</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name}}</td>
+            <td>{{ student.course}}</td>
+            <td>{{ student.city}}</td>
+        </tr>
+        {% endfor %}
+
+        </table>
+    </body>
+
+</html>
